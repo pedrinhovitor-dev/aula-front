@@ -4,87 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atendimento</title>
+    <link rel="stylesheet" href="atendimento.css">
 </head>
 <body>
     <header>
-        <h1>Central<br>Empresas</h1>
+        <img src="logo.png" alt="Logo Central Empresas" class="logo">
         <nav>
             <a href="index.html">Inicio</a>
             <a href="catalogo.html">Catálogo</a>
             <a href="orcamento.html">Orçamento</a>
-            <a href="atendimento.html">Atendimento</a>
+            <a href="atendimento.html" aria-current="page">Atendimento</a>
             <a href="sobre_nos.html">Sobre nós</a>&#x20;
         </nav>
      </header>
 
      <main>
-     <section>
-        <h1>Fale conosco</h1>
-        <h2>Estamos prontos para ajudar sua empresa</h2>
+     <section class="section1">
+        <div>
+            <h1 class="section1 h1">Fale conosco</h1>
+            <h3 class="section1 h3">Estamos prontos para ajudar sua empresa!</h3>
+        </div>
+        <img src="icone-headset.png" alt="Ícone de headset de atendimento" class="icone">
     </section>
-    <section>
-        <div>
-            <img scr="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBRm1XJjD7jSqXOddMFAzLvdUbhpFxPqcj-_7AEbEQ6A&s=10">
-            <h3>WhatsApp</h3>
-            <P>Atendimento rápido e<br>direto pelo WhatsApp</P>
-            <button>conversar agora</button>
+    <section class="section2">
+        <div class="cards">
+            <div class="card-contato" id="whatsapp">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3BNAvaBZ_ENOY90wF5GRt0JqMu45tqezjtQWp-fSIqw&s=10" class="wpp">
+                <h3>WhatsApp</h3>
+                <P>Atendimento rápido e<br>direto pelo WhatsApp</P>
+                <button>conversar agora</button>
+            </div>
+            <div class="card-contato" id="email">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKJVKwuY4XBIYQVLgHYCSKHbtDTu-By9nCub_gfkOffQ&s=10" class="email">
+                <h3>E-mail</h3>
+                <P>Envie sua mensagem<br>para nossa equipe</P>
+                <button class="button1">Enviar e-mail</button>
+            </div>
+            <div class="card-contato" id="telefone">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4gPhu7lKJa5CgChUiEj7Q8dOqdNKYYtPbPuwwebx1QQ&s=10" class="telefone">
+                <h3>Telefone</h3>
+                <P class="button3">Fale conosco por telefone</P>
+                <button>(xx) xxxx-xxxx</button>
+            </div>
         </div>
-        <div>
-            <img scr="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKJVKwuY4XBIYQVLgHYCSKHbtDTu-By9nCub_gfkOffQ&s=10">
-            <h3>E-mail</h3>
-            <P>Envie sua mensagem<br>para nossa equipe</P>
-            <button>Enviar E-mail</button>
-        </div>
-        <div>
-            <img scr="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGEJ2BtWSyKZdRfiU9_tU_HjLNzpRIRIG56T2kqOUA4g&s=10">
-            <h3>Telefone</h3>
-            <P>Fale conosco por telefone</P>
-            <button>(xx) xxxx-xxxx</button>
-        </div>
-        <div>
-            <p>Ou, se preferir, preencha o formulário abaixo:</p>
-        </div>        
+        <p class="texto-formulario">
+            Ou, se preferir, preencha o formulário abaixo:
+        </p>
     </section>
-    <section>
-        <form>
+    <section class="section3">
+        <form class="formulario">
             <div>
-                <label>Nome da empresa:</label>
-                <input type="Name" name="Nome" placeholder="Nome da empresa">
+                <label for="empresa">Nome da empresa:</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Digite o nome">
             </div>
             <div>
-                <label>E-mail:</label>
-                <input type="email" name="email" placeholder="Digite seu e-mail">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
             </div>
             <div>
-                <label>Mensagem:</label>
-                <input type="textarea" name="textarea" placeholder="Mensagem">
+                <label for="responsavel">Nome do responsável:</label>
+                <input type="text" id="responsavel" name="responsavel" placeholder="Digite seu nome">
             </div>
-            <div>
-                <button>Enviar Mensagem</button>
+            <div class="campo-mensagem">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem"></textarea>
+            </div>
+            <div class="campo-botao">
+                <button type="submit">Enviar Mensagem</button>
             </div>
         </form>
     </section>
     </main>
     <footer>
-        <div>
+        <div class="footer-info">
             <h3>Central Empresas</h3>
             <p>Soluções e atendimento para sua empresa.</p>
         </div>
-        <div>
+        <div class="footer-nav">
             <h3>Navegação</h3>
-            <p>Início</p>
-            <p>Catálogo</p>
-            <p>Orçamento</p>
-            <p>Atendimento</p>
-            <p>Sobre Nós</p>
+            <a href="index.html">Início</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="orcamento.html">Orçamento</a>
+            <a href="atendimento.html">Atendimento</a>
+            <a href="sobre_nos.html">Sobre Nós</a>
         </div>
-        <div>
+        <div class="footer-contato">
             <h3>Contato</h3>
-            <P>WatsApp</P>
-            <P>E-mail</P>
-            <P>Telefone</P>
+            <a href="#whatsapp">WhatsApp</a>
+            <a href="#email">E-mail</a>
+            <a href="#telefone">Telefone</a>
         </div>
-        <p>© 2026 Central Empresas.</p>
+        <p class="copyright">© 2026 Central Empresas.</p>
     </footer>
 </body>
 </html>
