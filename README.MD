@@ -30,3 +30,9 @@ O projeto tem como finalidade colocar em prática os conhecimentos adquiridos du
 
 
 Projeto desenvolvido para fins acadêmicos.
+
+## Publicar no Render
+
+O projeto está configurado como site estático pelo arquivo `render.yaml`. A pasta `public` será publicada e a página inicial redireciona para o Catálogo.
+
+Para publicar, conecte o repositório `aula-front` ao Render usando **New + Blueprint**. O Render usará a configuração do `render.yaml` para criar e publicar o site.
