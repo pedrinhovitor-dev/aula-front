@@ -1,0 +1,249 @@
+body {
+    margin: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #142B4A;
+    padding: 15px 30px;
+    clip-path: ellipse(150% 100% at 50% 0%);
+}
+.logo {
+    width: 180px;
+}
+nav{
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: bold;
+}
+nav a:hover {
+    color: orange;
+}
+nav a[aria-current="page"] {
+    border-bottom: 3px solid orange;
+    padding-bottom: 8px;
+}
+.icone {
+    width: 220px;
+}
+.section1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#142B4A;
+    padding: 15px 15px;
+    
+}
+.section1 h1 {
+    margin-bottom: 0px;
+}
+
+.section1 h3 {
+    margin-top: 0;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.cards div {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+.section2 {
+    background-color: #f4f6f9;
+    padding: 40px;
+}
+.wpp {
+    width: 100px;
+}
+.email {
+    width: 100px;
+}
+.telefone {
+    width: 100px;
+}
+.cards button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #142B4A;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.button3 {
+    margin-top: 36px;
+}
+.cards button:hover {
+    background-color: #F28C28;
+}
+.texto-formulario {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 18px;
+}
+.section3 {
+    background-color: #f4f6f9;
+    padding: 0px;
+}
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+}
+.formulario > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+.campo-botao {
+    grid-column: 1 / -1;
+    align-items: center;
+}
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+.formulario textarea {
+    height: 120px;
+    resize: vertical;
+}
+.formulario button {
+    background-color: #F28C28;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.formulario button:hover {
+    background-color: #142B4A;
+}
+.formulario label {
+    font-size: 15px;
+    font-weight: bold;
+    color: #142B4A;
+}
+@media (max-width: 600px) {
+    header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    }
+    .logo {
+    width: 140px;
+    }
+    nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    }
+    nav a {
+    font-size: 14px;
+    }
+    .section1 {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    }
+    .icone {
+    width: 160px;
+    }
+    .section2 {
+    padding: 25px 15px;
+    }
+    .cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    }
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+    .campo-botao {
+        grid-column: 1;
+    }
+    footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    }
+}
+.footer-info {
+    grid-column: 1 / -1;
+    text-align: center;
+    border-bottom: 1px solid #ffffff50;
+    padding-bottom: 5px;
+}
+.footer-info h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    background-color: #142B4A;
+    color: white;
+    padding: 40px;
+}
+.footer-nav a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 8px;
+}
+.footer-nav a:hover {
+    color: #F28C28;
+}
+.footer-contato a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 8px;
+}
+.footer-contato a:hover {
+    color: #F28C28;
+}
+.copyright {
+    grid-column: 1 / -1;
+    text-align: center;
+    border-top: 1px solid #ffffff50;
+    padding-top: 20px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.footer-nav h3,
+.footer-contato h3 {
+    color: #F28C28;
+    margin-bottom: 15px;
+}
+.footer-nav,
+.footer-contato {
+    text-align: center;
+}
+
+
+
