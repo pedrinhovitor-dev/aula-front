@@ -42,7 +42,6 @@ nav a[aria-current="page"] {
 texto-sobre {
     width: 60%;
 }
-
 .imagem-sobre {
      width: 67%;
 }
@@ -61,6 +60,9 @@ body {
     color: #102D50;
     font-size: 32px;
     margin-bottom: 15px;
+}
+.texto-sobre p {
+    color: #102D50;
 }
 .subtitulo-sobre {
     color: #102D50;
@@ -100,6 +102,10 @@ body {
     color: #102D50;
     border-right: 1px solid #B8C8DA;
     padding: 5px;
+}
+.card h3 {
+    font-size: 28px;
+    margin: 10px 0;
 }
 .card:last-child {
     border-right: none;
@@ -156,4 +162,59 @@ footer {
 .footer-nav,
 .footer-contato {
     text-align: center;
+}
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    .logo {
+        width: 140px;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    nav a {
+        font-size: 14px;
+    }
+    .apresentacao {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 30px 20px;
+    }
+    .texto-sobre {
+        width: 100%;
+    }
+    .imagem-sobre {
+        width: 100%;
+    }
+    .imagem-sobre img {
+        height: 200px;
+    }
+    .diferenciais {
+        margin: 20px;
+        padding: 20px 15px;
+    }
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .card {
+        border-right: none;
+        border-bottom: 1px solid #B8C8DA;
+        padding: 10px;
+    }
+    .card:last-child {
+        border-bottom: none;
+    }
+    footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 30px 20px;
+    }
 }
