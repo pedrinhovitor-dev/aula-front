@@ -10,7 +10,7 @@ formulario.addEventListener("submit", function(event) {
 
     if (usuario === "admin" && senha === "admin") {
 
-        window.location.href = "sobre.html";
+        window.location.href = "index.html";
 
     } else {
 
