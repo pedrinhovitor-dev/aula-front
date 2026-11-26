@@ -23,10 +23,10 @@ nav a {
     font-weight: bold;
 }
 nav a:hover {
-    color: orange;
+    color: #F28C28;
 }
 nav a[aria-current="page"] {
-    border-bottom: 3px solid orange;
+    border-bottom: 3px solid #F28C28;
     padding-bottom: 8px;
 }
 .icone {
