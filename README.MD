@@ -12,7 +12,8 @@ Páginas do projeto
 
 O site será composto por cinco páginas principais:
 
-* Início: apresentação da Central Empresas.
+* Login: acesso à plataforma.
+* Início: apresentação da Central Empresas, disponível após o login.
 * Catálogo: exposição dos produtos disponíveis.
 * Orçamento: página para solicitação de orçamentos.
 * Atendimento: canais de contato e formulário para envio de mensagens.
@@ -33,6 +34,6 @@ Projeto desenvolvido para fins acadêmicos.
 
 ## Publicar no Render
 
-O projeto está configurado como site estático pelo arquivo `render.yaml`. A pasta `public` será publicada e a página inicial redireciona para o Catálogo.
+O projeto está configurado como site estático pelo arquivo `render.yaml`. A pasta `public` será publicada e o acesso ao site começará pela página de login.
 
 Para publicar, conecte o repositório `aula-front` ao Render usando **New + Blueprint**. O Render usará a configuração do `render.yaml` para criar e publicar o site.

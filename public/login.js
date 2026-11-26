@@ -9,7 +9,7 @@ formulario.addEventListener("submit", function(event) {
     const mensagemErro = document.getElementById("mensagem-erro");
 
     if (usuario === "admin" && senha === "admin") {
-
+        sessionStorage.setItem("central-empresas-authenticated", "true");
         window.location.href = "index.html";
 
     } else {
