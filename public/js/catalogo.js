@@ -1,4 +1,6 @@
+// Isola as variáveis para não poluir o escopo global da página.
 (() => {
+  // Reúne os elementos usados pelo catálogo e pelo carrinho.
   const produtos = [...document.querySelectorAll('.produto-card')];
   const listaProdutos = document.querySelector('.produtos-lista');
   const listaCarrinho = document.getElementById('carrinho-itens');
@@ -7,12 +9,15 @@
   const totalCarrinho = document.getElementById('carrinho-total');
   const contagemCarrinho = document.getElementById('carrinho-contagem');
   const botoesCategoria = [...document.querySelectorAll('.categoria-item')];
+  // Guarda os itens pelo ID para atualizar a quantidade sem duplicar produtos.
   const carrinho = new Map();
+  // Formata os preços no padrão de moeda brasileira.
   const formatarPreco = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL'
   }).format;
 
+  // Cria a linha do carrinho usando texto, sem interpretar nomes como HTML.
   function criarItemCarrinho(item) {
     const linha = document.createElement('li');
     const informacoes = document.createElement('div');
@@ -38,6 +43,7 @@
     return linha;
   }
 
+  // Atualiza itens, contagem, total e estado vazio do carrinho.
   function renderizarCarrinho() {
     const itens = [...carrinho.values()];
     const quantidadeTotal = itens.reduce((total, item) => total + item.quantidade, 0);
@@ -53,6 +59,7 @@
     totalCarrinho.replaceChildren('Total: ', valor);
   }
 
+  // Adiciona o produto selecionado ou aumenta sua quantidade.
   function adicionarAoCarrinho(card) {
     const id = card.dataset.id;
     const item = carrinho.get(id) || {
@@ -67,11 +74,13 @@
     renderizarCarrinho();
   }
 
+  // Usa delegação para adicionar produtos ao clicar em qualquer parte do card.
   listaProdutos.addEventListener('click', (evento) => {
     const card = evento.target.closest('.produto-card');
     if (card) adicionarAoCarrinho(card);
   });
 
+  // Permite adicionar cards focados pelo teclado com Enter ou Espaço.
   listaProdutos.addEventListener('keydown', (evento) => {
     const card = evento.target.closest('.produto-card');
     if (!card || (evento.key !== 'Enter' && evento.key !== ' ')) return;
@@ -80,6 +89,7 @@
     adicionarAoCarrinho(card);
   });
 
+  // Remove o produto selecionado e atualiza o carrinho.
   listaCarrinho.addEventListener('click', (evento) => {
     const botao = evento.target.closest('.carrinho-remover');
     if (!botao) return;
@@ -88,6 +98,7 @@
     renderizarCarrinho();
   });
 
+  // Destaca a categoria escolhida e oculta os produtos das demais categorias.
   botoesCategoria.forEach((botao) => {
     botao.addEventListener('click', () => {
       const categoria = botao.dataset.categoria;
@@ -102,5 +113,6 @@
     });
   });
 
+  // Mostra o estado inicial do carrinho vazio.
   renderizarCarrinho();
 })();
