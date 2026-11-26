@@ -15,7 +15,7 @@
             <a href="catalogo-cnpj.html" aria-current="page">Catálogo</a>
             <a href="orcamento.html">Orçamento</a>
             <a href="atendimento.html">Atendimento</a>
-            <a href="sobre_nos.html">Sobre nós</a>&#x20;
+            <a href="sobre.html">Sobre nós</a>&#x20;
         </nav>
      </header>
 
@@ -37,32 +37,76 @@
       <p>As condições dependem da análise e confirmação dos dados da empresa.</p>
     </section>
 
-    <section id="produtos" class="catalogo-produtos">
-      <h2>Produtos em destaque</h2>
+    <section id="produtos" class="catalogo-layout">
+      <h2>Catálogo de produtos</h2>
 
-      <article>
-        <h3>Casa e decoração</h3>
-        <p>Itens para organizar, decorar e deixar os ambientes mais práticos.</p>
-        <a href="#contato">Consultar produto</a>
-      </article>
+      <div class="catalogo-conteudo">
+        <aside class="catalogo-categorias" aria-label="Categorias">
+          <h3>Categorias</h3>
+          <ul class="lista-categorias">
+            <li><button type="button" class="categoria-item ativo" data-categoria="todas">Todas</button></li>
+            <li><button type="button" class="categoria-item" data-categoria="Casa e decoração">Casa e decoração</button></li>
+            <li><button type="button" class="categoria-item" data-categoria="Eletrônicos e acessórios">Eletrônicos e acessórios</button></li>
+            <li><button type="button" class="categoria-item" data-categoria="Utilidades e ferramentas">Utilidades e ferramentas</button></li>
+            <li><button type="button" class="categoria-item" data-categoria="Moda e variedade">Moda e variedade</button></li>
+          </ul>
+        </aside>
 
-      <article>
-        <h3>Eletrônicos e acessórios</h3>
-        <p>Produtos e acessórios para facilitar as tarefas do dia a dia.</p>
-        <a href="#contato">Consultar produto</a>
-      </article>
+        <div class="catalogo-centro">
+          <p class="catalogo-instrucao">Clique em um produto para adicioná-lo ao carrinho.</p>
+          <div class="produtos-lista">
+            <article class="produto-card" data-id="1" data-nome="Luminária de Mesa" data-preco="89.90" data-categoria="Casa e decoração" tabindex="0" role="button">
+              <span class="produto-categoria">Casa e decoração</span>
+              <h3>Luminária de Mesa</h3>
+              <p>Iluminação prática para escritório ou quarto.</p>
+              <p class="produto-preco">R$ 89,90</p>
+              <span class="produto-acao">Adicionar ao carrinho</span>
+            </article>
 
-      <article>
-        <h3>Utilidades e ferramentas</h3>
-        <p>Encontre itens úteis para sua casa, seu negócio e muito mais.</p>
-        <a href="#contato">Consultar produto</a>
-      </article>
+            <article class="produto-card" data-id="2" data-nome="Fone de Ouvido Bluetooth" data-preco="149.90" data-categoria="Eletrônicos e acessórios" tabindex="0" role="button">
+              <span class="produto-categoria">Eletrônicos e acessórios</span>
+              <h3>Fone de Ouvido Bluetooth</h3>
+              <p>Som sem fios para o dia a dia.</p>
+              <p class="produto-preco">R$ 149,90</p>
+              <span class="produto-acao">Adicionar ao carrinho</span>
+            </article>
 
-      <article>
-        <h3>Moda e variedade</h3>
-        <p>Confira outras opções e novidades disponíveis no nosso catálogo.</p>
-        <a href="#contato">Consultar produto</a>
-      </article>
+            <article class="produto-card" data-id="3" data-nome="Kit de Ferramentas 12 peças" data-preco="119.90" data-categoria="Utilidades e ferramentas" tabindex="0" role="button">
+              <span class="produto-categoria">Utilidades e ferramentas</span>
+              <h3>Kit de Ferramentas 12 peças</h3>
+              <p>Conjunto básico para pequenos reparos.</p>
+              <p class="produto-preco">R$ 119,90</p>
+              <span class="produto-acao">Adicionar ao carrinho</span>
+            </article>
+
+            <article class="produto-card" data-id="4" data-nome="Camiseta Polo Básica" data-preco="59.90" data-categoria="Moda e variedade" tabindex="0" role="button">
+              <span class="produto-categoria">Moda e variedade</span>
+              <h3>Camiseta Polo Básica</h3>
+              <p>Peça versátil para uso casual.</p>
+              <p class="produto-preco">R$ 59,90</p>
+              <span class="produto-acao">Adicionar ao carrinho</span>
+            </article>
+
+            <article class="produto-card" data-id="5" data-nome="Organizador de Gavetas" data-preco="39.90" data-categoria="Casa e decoração" tabindex="0" role="button">
+              <span class="produto-categoria">Casa e decoração</span>
+              <h3>Organizador de Gavetas</h3>
+              <p>Ajuda a manter objetos separados e acessíveis.</p>
+              <p class="produto-preco">R$ 39,90</p>
+              <span class="produto-acao">Adicionar ao carrinho</span>
+            </article>
+          </div>
+        </div>
+
+        <aside class="carrinho" aria-label="Carrinho de compras">
+          <h3><span class="carrinho-icone" aria-hidden="true">🛒</span> Carrinho <span id="carrinho-contagem" class="carrinho-contagem">(0)</span></h3>
+          <p id="carrinho-vazio" class="carrinho-vazio">Seu carrinho está vazio.</p>
+          <ul id="carrinho-itens" class="carrinho-itens"></ul>
+          <div id="carrinho-resumo" class="carrinho-resumo" hidden>
+            <p id="carrinho-total" class="carrinho-total">Total: <strong>R$ 0,00</strong></p>
+            <button type="button" class="btn-comprar" id="btn-comprar">Comprar</button>
+          </div>
+        </aside>
+      </div>
     </section>
 
     <section id="contato">
@@ -70,6 +114,8 @@
       <p>Entre em contato para consultar produtos, informar seu CNPJ e conhecer as condições disponíveis.</p>
     </section>
   </main>
+
+  <script src="js/catalogo.js"></script>
 
     <footer>
         <div class="footer-info">
@@ -82,7 +128,7 @@
             <a href="catalogo-cnpj.html" aria-current="page">Catálogo</a>
             <a href="orcamento.html">Orçamento</a>
             <a href="atendimento.html">Atendimento</a>
-            <a href="sobre_nos.html">Sobre Nós</a>
+            <a href="sobre.html">Sobre Nós</a>
         </div>
         <div class="footer-contato">
             <h3>Contato</h3>

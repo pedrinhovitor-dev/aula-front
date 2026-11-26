@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #142B4A;
+    padding: 15px 30px;
+    clip-path: ellipse(150% 100% at 50% 0%);
+}
+.logo {
+    width: 180px;
+}
+nav{
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #F28C28;
+}
+nav a[aria-current="page"] {
+    border-bottom: 3px solid #F28C28;
+    padding-bottom: 8px;
+}
+.icone {
+    width: 220px;
+}
+.apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 8%;
+}
+.texto-sobre {
+    width: 60%;
+}
+.imagem-sobre {
+     width: 67%;
+}
+
+.imagem-sobre img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: 70% center;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+.texto-sobre h1 {
+    color: #102D50;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.texto-sobre p {
+    color: #102D50;
+}
+.subtitulo-sobre {
+    color: #102D50;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.texto-sobre p {
+    line-height: 1.6;
+}
+.texto-sobre h1::before {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 4px;
+    background-color: #F58220;
+    margin-bottom: 12px;
+}
+.diferenciais {
+     background-color: #EAF1FA;
+    margin: 20px 8%;
+    padding: 15px 25px;
+    border-radius: 15px;
+}
+.diferenciais h2 {
+    text-align: center;
+    color: #102D50;
+    margin-bottom: 15px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.card {
+    text-align: center;
+    color: #102D50;
+    border-right: 1px solid #B8C8DA;
+    padding: 5px;
+}
+.card h3 {
+    font-size: 28px;
+    margin: 10px 0;
+}
+.card:last-child {
+    border-right: none;
+}
+.footer-info {
+    grid-column: 1 / -1;
+    text-align: center;
+    border-bottom: 1px solid #ffffff50;
+    padding-bottom: 5px;
+}
+.footer-info h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    background-color: #142B4A;
+    color: white;
+    padding: 40px;
+}
+.footer-nav a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 8px;
+}
+.footer-nav a:hover {
+    color: #F28C28;
+}
+.footer-contato a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 8px;
+}
+.footer-contato a:hover {
+    color: #F28C28;
+}
+.copyright {
+    grid-column: 1 / -1;
+    text-align: center;
+    border-top: 1px solid #ffffff50;
+    padding-top: 20px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.footer-nav h3,
+.footer-contato h3 {
+    color: #F28C28;
+    margin-bottom: 15px;
+}
+.footer-nav,
+.footer-contato {
+    text-align: center;
+}
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    .logo {
+        width: 140px;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    nav a {
+        font-size: 14px;
+    }
+    .apresentacao {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 30px 20px;
+    }
+    .texto-sobre {
+        width: 100%;
+    }
+    .imagem-sobre {
+        width: 100%;
+    }
+    .imagem-sobre img {
+        height: 200px;
+    }
+    .diferenciais {
+        margin: 20px;
+        padding: 20px 15px;
+    }
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .card {
+        border-right: none;
+        border-bottom: 1px solid #B8C8DA;
+        padding: 10px;
+    }
+    .card:last-child {
+        border-bottom: none;
+    }
+    footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 30px 20px;
+    }
+}
