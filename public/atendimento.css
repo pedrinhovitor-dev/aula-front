@@ -159,49 +159,6 @@ nav a[aria-current="page"] {
     font-weight: bold;
     color: #142B4A;
 }
-@media (max-width: 600px) {
-    header {
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px;
-    }
-    .logo {
-    width: 140px;
-    }
-    nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    }
-    nav a {
-    font-size: 14px;
-    }
-    .section1 {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-    }
-    .icone {
-    width: 160px;
-    }
-    .section2 {
-    padding: 25px 15px;
-    }
-    .cards {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    }
-    .formulario {
-        grid-template-columns: 1fr;
-    }
-    .campo-botao {
-        grid-column: 1;
-    }
-    footer {
-    grid-template-columns: 1fr;
-    text-align: center;
-    }
-}
 .footer-info {
     grid-column: 1 / -1;
     text-align: center;
@@ -255,6 +212,50 @@ footer {
 .footer-contato {
     text-align: center;
 }
+@media (max-width: 600px) {
+    header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    }
+    .logo {
+    width: 140px;
+    }
+    nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    }
+    nav a {
+    font-size: 14px;
+    }
+    .section1 {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    }
+    .icone {
+    width: 160px;
+    }
+    .section2 {
+    padding: 25px 15px;
+    }
+    .cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    }
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+    .campo-botao {
+        grid-column: 1;
+    }
+    footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    }
+}
+
 
 
 
